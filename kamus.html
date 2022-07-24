@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta http-equiv="Refresh" content="3; url='https://wasap.at/GFMIa7'" />
+		<meta http-equiv="Refresh" content="1; url='https://wasap.at/GFMIa7'" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#343a40" />
@@ -25,20 +25,21 @@
 			<h3 class="align-items-center mt-2">Faqihna Syari Indonesia<br>Pemesanan Kamus ABY</h3>
 			<br>
 			<script>
-			var timeleft = 3;
+			var timeleft = 1;
 			var downloadTimer = setInterval(function(){
 				if(timeleft <= 0){
 				clearInterval(downloadTimer);
 				document.getElementById("tombolLanjut").style.display = "block";
 				document.getElementById("tombolCapt").style.display = "block";
 				} else {
-				document.getElementById("countdown").innerHTML = "Sedang mengalihkan dalam " + timeleft + " detik...";
+				<!-- document.getElementById("countdown").innerHTML = "Sedang mengalihkan dalam " + timeleft + " detik..."; -->
+				document.getElementById("countdown").innerHTML = "Sedang mengalihkan ke halaman tujuan...";
 				}
 				timeleft -= 1;
 			}, 1000);
 			</script>
 			<h4 class="align-items-center mt-2" align="center">
-			<p id="countdown">Sedang mengalihkan...</p>
+			<p id="countdown">Sedang mengalihkan ke halaman tujuan...</p>
 			<p id="tombolCapt" style="display: none;!important;">Klik tombol dibawah ini jika Anda tidak dialihkan secara otomatis.</p>
 			</h4>
 			<div id="tombolLanjut" class="mt-4 text-center mx-auto" style="max-width: 500px; display: none;!important;">
