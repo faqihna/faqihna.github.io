@@ -232,6 +232,44 @@
 	</div>
 	
 </div>
+<!-- Bagikan Web Kami -->
+<div class="mt-4 text-center mx-auto" style="max-width: 500px; !important;">
+	<button id="bagikan_faqihna" class="btn btn-outline-dark btn-block btn-lg left-icon-holder" >
+	<i class="fas fa-share-square"></i>&nbsp;</i>Bagikan Situs</button>
+
+    <script>
+        document.querySelector('#bagikan_faqihna')
+        .addEventListener('click', event => {
+  
+            // Fallback, Tries to use API only
+            // if navigator.share function is
+            // available.
+			// This API only support HTTPS !!!
+            if (navigator.share) {
+                navigator.share({
+  
+                    // Judul Yang Di Share
+                    title: document.title,
+					text: "Kunjungi Situs Faqihna Syari Indonesia di " + window.location.href + " yaa, Terima kasih! ",
+                    // url: window.location.href + " Terima kasih!. ",
+					
+                }).then(() => {
+                    console.log('Terima kasih sudah berbagi!');
+                }).catch(err => {
+  
+                    // Handle errors, if occured
+                    console.log(
+                    "Terjadi kesalahan ketika menggunakan Web API:");
+                    console.log(err);
+                });
+            } else {
+  
+                // Alerts user if API not available 
+                alert("Gunakan HTTPS, atau browser browser lain.");
+            }
+        })
+    </script>
+</div>
 	<!--------------------Footer---------------------------->
 	<div class="footer mt-4 text-center mx-auto"  style="max-width: 500px; !important;">
 		<hr/>
